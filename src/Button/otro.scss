@@ -1,0 +1,6 @@
+$mainColor: red;
+
+body {
+	background-color: $mainColor;
+	color: darken($mainColor, 20);
+}

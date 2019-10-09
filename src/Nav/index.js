@@ -1,14 +1,14 @@
 import React from 'react';
 
 const Nav = (props) => {
-	const enlaces = props.enlaces;
+	const { enlaces } = props;
 	return (
 		<nav>
 			<ul>
 				{
-					enlaces.map(unEnlace => {
+					enlaces.map((unEnlace, i) => {
 						return (
-							<li>
+							<li key={i} id={`item-${i}`}>
 								<a href={unEnlace.url}>{unEnlace.texto}</a>
 							</li>
 						)

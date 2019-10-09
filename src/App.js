@@ -12,21 +12,31 @@ function App () {
   const imgStyle = {
     width: '200px',
   }
+  const links = [
+    { texto: 'Home', url: '/' },
+    { texto: 'Quienes', url: '/quienes-somos' },
+    { texto: 'Productos', url: 'productos' },
+    { texto: 'Contacto', url: 'contacto' },
+  ];
   return (
     <React.Fragment>
       {/* Componente Nav  */}
       <Nav 
-        enlaces={[
-          {texto: 'Home', url:'/'},
-          {texto: 'Quienes', url: '/quienes-somos'},
-          {texto: 'Productos', url: 'productos'},
-          {texto: 'Contacto', url: 'contacto'},
-        ]}
+        enlaces={links}
       />
 
-      {/* Componente Saludo  */}
-      <Saludo texto='Hello world' prueba='123' />
-      <Saludo texto='Hola mundo' prueba='34345' />
+      {/* Componente Saludo con children  */}
+      <Saludo texto='Hello world - abajo el hijo' prueba='123'>
+        <b>hoy es 8 de octubre</b>
+        <br/>
+        <i>lorem ipsum</i>
+        <Nav
+          enlaces={links}
+        />
+      </Saludo>
+
+      <Saludo />
+
       <Saludo texto='Bon dia' prueba='sfsdf' />
 
       <label htmlFor="user">Username:</label>
