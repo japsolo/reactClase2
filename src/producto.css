@@ -1,0 +1,14 @@
+.todos-los-productos {
+	width: 900px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	border: solid 5px red;
+}
+
+.un-producto {
+	width: 30%;
+	box-sizing: border-box;
+	padding: 10px;
+	border: solid 1px black;
+}
